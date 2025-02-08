@@ -1,7 +1,7 @@
 --[[
     This script is not intended to be modified.
 
-    Interface Owner: lugiadev
+    Interface Owner: _lugia.
     Bundling Tool: Latte Softworks & Kotera
 
     .gg/w-azure
@@ -61,4 +61,1245 @@ end)
 
 local setidentity = syn and syn.set_thread_identity or set_thread_identity or setidentity or setthreadidentity or function(...) return ... end
 setidentity(8)
-local a,b={{1,'ModuleScript',{'MainModule'},{{2,'ModuleScript',{'Creator'}}}}}local c={function()local c,d,e,f,g=b(1)repeat task.wait(0.5)until game:IsLoaded()local h,i,j,k=getgenv or function()return shared end,function(h)local i=os.time()-h local j,k,l=math.floor(i/3600),math.floor((i%3600)/60),i%60 return string.format('%02d%s, %02dmins, %02dsec',j,j>1 and'hs'or'h',k,l)end,function(h)local i=#h if i<=6 then return string.rep('*',i)end local j,k,l=string.sub(h,1,1),string.sub(h,-3),string.rep('*',i-4)return j..l..k end,game:GetService'TweenService'local l,m=function(l,m,n)if not l then return end local o=TweenInfo.new(n,Enum.EasingStyle.Linear,Enum.EasingDirection.Out)local p=k:Create(l,o,{GroupTransparency=m})p:Play()local q=l:FindFirstChildOfClass'UIStroke'if q then local r=k:Create(q,o,{Transparency=m})r:Play()end end,e(d.Creator)local n,o,p,q=m.New,game:GetService'RunService',game:GetService'TweenService',game:GetService'Players'.LocalPlayer local r,s,t,u,v=q.Name,tick(),tick(),tick(),0 o.RenderStepped:Connect(function()local w=tick()v=math.floor(1/(w-s))s=w end)local w,x=n('ScreenGui',{Parent=o:IsStudio()and q.PlayerGui or game:GetService'CoreGui',IgnoreGuiInset=true,ResetOnSpawn=false,DisplayOrder=9e5}),{}function x.CreateScreen(y,z)local A,B,C,D,E,F,G,H={},os.time(),j(r),true,false,0.5,0,0.25 local I=function()D=not D E=true l(A.Frame,D and 0 or 1,0.25)l(A.Watermark,D and 1 or 0,0.25)task.delay(F,function()E=false end)end A.Watermark=n('CanvasGroup',{Parent=w,AnchorPoint=Vector2 .new(0.5,0),BackgroundColor3=Color3 .fromRGB(11,11,15),BackgroundTransparency=0.5,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .new(0.5,0,0,6),Size=UDim2 .fromScale(0.0625,0.0833),OnClick=function()I()end},{n('UICorner',{CornerRadius=UDim.new(0.01,5)}),n('UIStroke',{Color=Color3 .fromRGB(84,84,87),Transparency=0.6}),n('ImageLabel',{Image='http://www.roblox.com/asset/?id=127037580711111',AnchorPoint=Vector2 .new(0.5,0.5),BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,LayoutOrder=1,Position=UDim2 .fromScale(0.5,0.5),Size=UDim2 .fromScale(0.8,0.8)}),n'UIAspectRatioConstraint'})A.Frame=n('CanvasGroup',{Parent=w,Size=UDim2 .fromScale(1,1),BackgroundColor3=Color3 .fromRGB(0,0,0),BackgroundTransparency=0.3,GroupTransparency=1},{n('Frame',{AnchorPoint=Vector2 .new(0.5,0.5),AutomaticSize=Enum.AutomaticSize.XY,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.5,0.4)},{n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/FredokaOne.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),Text='Rokid Manager',TextColor3=Color3 .fromRGB(235,111,146),TextSize=80,AnchorPoint=Vector2 .new(0.5,0.5),AutomaticSize=Enum.AutomaticSize.X,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.5,0.5),Size=UDim2 .new(1,0,0,85)},{n('UIStroke',{Thickness=3})}),n('UIListLayout',{HorizontalAlignment=Enum.HorizontalAlignment.Center,SortOrder=Enum.SortOrder.LayoutOrder}),n('Frame',{BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Size=UDim2 .fromOffset(336,24)},{n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),RichText=true,Text='time elapsed:',TextColor3=Color3 .fromRGB(255,255,255),TextSize=16,TextTransparency=0.6,TextXAlignment=Enum.TextXAlignment.Right,AnchorPoint=Vector2 .new(0.5,0.5),BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.5,0.56),Size=UDim2 .fromOffset(100,22)}),n('UIListLayout',{Padding=UDim.new(0,8),FillDirection=Enum.FillDirection.Horizontal,SortOrder=Enum.SortOrder.LayoutOrder,ItemLineAlignment=Enum.ItemLineAlignment.Center}),n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),RichText=true,Text='0 hs, 30 mins, 0 sec',TextColor3=Color3 .fromRGB(255,255,255),TextSize=24,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Left,AnchorPoint=Vector2 .new(0.5,0.5),BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.553,0.458),Size=UDim2 .fromOffset(230,22),OnHeartbeat=function(J)local K=i(B)J.Text=K task.wait(1)end})}),n('Frame',{BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Size=UDim2 .fromOffset(336,24)},{n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),RichText=true,Text='logged in as:',TextColor3=Color3 .fromRGB(255,255,255),TextSize=16,TextTransparency=0.6,TextXAlignment=Enum.TextXAlignment.Right,AnchorPoint=Vector2 .new(0.5,0.5),BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.5,0.56),Size=UDim2 .fromOffset(100,22)}),n('UIListLayout',{Padding=UDim.new(0,8),FillDirection=Enum.FillDirection.Horizontal,SortOrder=Enum.SortOrder.LayoutOrder,ItemLineAlignment=Enum.ItemLineAlignment.Center}),n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),RichText=true,Text=C,TextColor3=Color3 .fromRGB(255,255,255),TextSize=24,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Left,AnchorPoint=Vector2 .new(0.5,0.5),BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.553,0.458),Size=UDim2 .fromOffset(230,22)})})}),n('Frame',{AnchorPoint=Vector2 .new(0.5,0.5),AutomaticSize=Enum.AutomaticSize.X,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .new(0.5,0,0.4,150),Size=UDim2 .new(0,0,0.01,100)},{n('Frame',{BackgroundColor3=Color3 .fromRGB(11,11,15),BackgroundTransparency=0.5,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Size=UDim2 .fromScale(0.5,1)},{n('UIStroke',{Color=Color3 .fromRGB(84,84,87),Transparency=0.6}),n('UICorner',{CornerRadius=UDim.new(0,5)}),n('Frame',{AutomaticSize=Enum.AutomaticSize.Y,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromOffset(12,12),Size=UDim2 .fromScale(1,0)},{n('ImageLabel',{Image='http://www.roblox.com/asset/?id=127299419935629',ImageTransparency=0.4,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,LayoutOrder=1,Size=UDim2 .fromOffset(32,32)}),n('UIListLayout',{FillDirection=Enum.FillDirection.Horizontal,SortOrder=Enum.SortOrder.LayoutOrder,ItemLineAlignment=Enum.ItemLineAlignment.Center,HorizontalFlex=Enum.UIFlexAlignment.SpaceBetween}),n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),RichText=true,Text='FPS',TextColor3=Color3 .fromRGB(255,255,255),TextSize=24,TextTransparency=0.4,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Left,AnchorPoint=Vector2 .new(0.5,0.5),AutomaticSize=Enum.AutomaticSize.X,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.553,0.458),Size=UDim2 .fromOffset(0,22)})}),n('UIPadding',{PaddingBottom=UDim.new(0,12),PaddingLeft=UDim.new(0,12),PaddingRight=UDim.new(0,12),PaddingTop=UDim.new(0,8)}),n('UIListLayout',{SortOrder=Enum.SortOrder.LayoutOrder,VerticalFlex=Enum.UIFlexAlignment.SpaceBetween}),n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),RichText=true,Text=v,TextColor3=Color3 .fromRGB(255,255,255),TextSize=48,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Left,AnchorPoint=Vector2 .new(0.5,0.5),AutomaticSize=Enum.AutomaticSize.XY,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.553,0.458),Size=UDim2 .fromOffset(0,22),OnHeartbeat=function(J)if tick()-t<=0.5 then return end J.Text=v t=tick()end})}),n('UIListLayout',{Padding=UDim.new(0,8),FillDirection=Enum.FillDirection.Horizontal,SortOrder=Enum.SortOrder.LayoutOrder}),n('Frame',{BackgroundColor3=Color3 .fromRGB(11,11,15),BackgroundTransparency=0.5,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Size=UDim2 .fromScale(0.5,1)},{n('UIStroke',{Color=Color3 .fromRGB(84,84,87),Transparency=0.6}),n('UICorner',{CornerRadius=UDim.new(0,5)}),n('Frame',{AutomaticSize=Enum.AutomaticSize.Y,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromOffset(12,12),Size=UDim2 .fromScale(1,0)},{n('ImageLabel',{Image='http://www.roblox.com/asset/?id=111670308548285',ImageTransparency=0.4,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,LayoutOrder=1,Size=UDim2 .fromOffset(24,24)}),n('UIListLayout',{FillDirection=Enum.FillDirection.Horizontal,SortOrder=Enum.SortOrder.LayoutOrder,ItemLineAlignment=Enum.ItemLineAlignment.Center,HorizontalFlex=Enum.UIFlexAlignment.SpaceBetween}),n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),RichText=true,Text='Ping',TextColor3=Color3 .fromRGB(255,255,255),TextSize=24,TextTransparency=0.4,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Left,AnchorPoint=Vector2 .new(0.5,0.5),AutomaticSize=Enum.AutomaticSize.X,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.553,0.458),Size=UDim2 .fromOffset(0,22)})}),n('UIPadding',{PaddingBottom=UDim.new(0,12),PaddingLeft=UDim.new(0,12),PaddingRight=UDim.new(0,12),PaddingTop=UDim.new(0,10)}),n('UIListLayout',{SortOrder=Enum.SortOrder.LayoutOrder,VerticalFlex=Enum.UIFlexAlignment.SpaceBetween}),n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),RichText=true,Text='1',TextColor3=Color3 .fromRGB(255,255,255),TextSize=48,TextWrapped=false,TextXAlignment=Enum.TextXAlignment.Left,AnchorPoint=Vector2 .new(0.5,0.5),AutomaticSize=Enum.AutomaticSize.XY,BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .fromScale(0.553,0.458),Size=UDim2 .fromOffset(0,22),OnHeartbeat=function(J)if tick()-u<=0.5 or o:IsStudio()then return end J.Text=math.floor(game:GetService'Stats'.Network.ServerStatsItem['Data Ping']:GetValue())u=tick()end})})}),n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),Text='Double click onto the screen to show/hide the UI.',TextColor3=Color3 .fromRGB(255,255,255),TextSize=18,TextTransparency=0.5,TextWrapped=false,AnchorPoint=Vector2 .new(0.5,1),BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .new(0.5,0,1,-2),Size=UDim2 .new(1,0,0,20)}),n('TextLabel',{FontFace=Font.new('rbxasset://fonts/families/GothamSSm.json',Enum.FontWeight.Bold,Enum.FontStyle.Normal),Text='JobID: '..tostring(o:IsStudio()and'STUDIO DETECTED'or game.JobId),TextColor3=Color3 .fromRGB(255,255,255),TextSize=18,TextTransparency=0.5,TextWrapped=false,AnchorPoint=Vector2 .new(0.5,0),BackgroundColor3=Color3 .fromRGB(255,255,255),BackgroundTransparency=1,BorderColor3=Color3 .fromRGB(0,0,0),BorderSizePixel=0,Position=UDim2 .new(0.5,0,0,2),Size=UDim2 .new(1,0,0,20)})})A.Frame.InputBegan:Connect(function(J)if J.UserInputType==Enum.UserInputType.MouseButton1 or J.UserInputType==Enum.UserInputType.Touch then local K=o.Stepped:Wait()if(K-G)<H and E==false then I()end G=K end end)l(A.Frame,0,0.25)l(A.Watermark,1,0.25)return A end x:CreateScreen()return x end,function()local c,d,e,f,g=b(2)local h,i,j,l,m=game:GetService'RunService',d.Parent,{Registry={},ImageRegistry={},Signals={},TransparencyMotors={},HeartbeatSignals={},LinearMotors={},DefaultProperties={UICorner={CornerRadius=UDim.new(0,6)},ScreenGui={ResetOnSpawn=false,ZIndexBehavior=Enum.ZIndexBehavior.Sibling},Frame={BackgroundColor3=Color3 .new(1,1,1),BorderColor3=Color3 .new(0,0,0),BorderSizePixel=0},ScrollingFrame={BackgroundColor3=Color3 .new(1,1,1),BorderColor3=Color3 .new(0,0,0),ScrollBarImageColor3=Color3 .new(0,0,0)},TextLabel={BackgroundColor3=Color3 .new(1,1,1),BorderColor3=Color3 .new(0,0,0),Font=Enum.Font.SourceSans,Text='',TextColor3=Color3 .new(0,0,0),BackgroundTransparency=1,TextSize=14},TextButton={BackgroundColor3=Color3 .new(1,1,1),BorderColor3=Color3 .new(0,0,0),AutoButtonColor=false,Font=Enum.Font.SourceSans,Text='',TextColor3=Color3 .new(0,0,0),TextSize=14},TextBox={BackgroundColor3=Color3 .new(1,1,1),BorderColor3=Color3 .new(0,0,0),ClearTextOnFocus=false,Font=Enum.Font.SourceSans,Text='',TextColor3=Color3 .new(0,0,0),TextSize=14},ImageLabel={BackgroundTransparency=1,BackgroundColor3=Color3 .new(1,1,1),BorderColor3=Color3 .new(0,0,0),BorderSizePixel=0},ImageButton={BackgroundColor3=Color3 .new(1,1,1),BorderColor3=Color3 .new(0,0,0),AutoButtonColor=false},CanvasGroup={BackgroundColor3=Color3 .new(1,1,1),BorderColor3=Color3 .new(0,0,0),BorderSizePixel=0}}},function(h,i)return end,function(h:Color3,i:Color3)if typeof(h)=='number'then return h==i end local j,l,m,n,o,p=h.R,h.G,h.B,i.R,i.G,i.B local q,r,s=math.abs(j*255-n*255),math.abs(l*255-o*255),math.abs(m*255-p*255)return q<=5 and s<=5 and r<=5 end function j.AddSignal(n,o)if typeof(n)=='table'then for p,q in pairs(n)do table.insert(j.Signals,q:Connect(o))end else table.insert(j.Signals,n:Connect(o))end end function j.Disconnect()for n=#j.Signals,1,-1 do local o=table.remove(j.Signals,n)o:Disconnect()end end function j.UpdateTheme(n)for o,p in next,j.Registry do if typeof(o)=='function'then local q=j.GetThemeProperty(p.Properties.Properties)if typeof(q)~='Color3'then if q~=o()then return o(q)end end if typeof(q)=='Color3'and not m(q,o())then o(q)end else for q,r in next,p.Properties do if n and q~=n then else o[q]=j.GetThemeProperty(r)end end end end end function j.AddThemeObject(n,o,p)local q=#j.Registry+1 local r={Object=n,Properties=o,Idx=q}j.Registry[n]=r if p then return n end j.UpdateTheme()return n end function j.AddImageObject(n,o)local p=#j.Registry+1 local q={Object=n,Properties=o,Idx=p}j.ImageRegistry[n]=q j.UpdateTheme()return n end function j.OverrideTag(n,o)j.Registry[n].Properties=o j.UpdateTheme()end local n,o={'OnClick','OnHover','OnLeave','OnHeartbeat','OnTextChange','CreateLinearMotor'},{'ThemeTag','ImageThemeTag'}function j.New(p,q,r)q=q or{}r=r or{}local s=Instance.new(p)for t,u in next,j.DefaultProperties[p]or{}do s[t]=u end for v,w in next,q or{}do if table.find(n,v)then local x,y if typeof(w)~='function'then warn(v..' must be a function')continue end local z=function()return task.spawn(w,s)end if v=='OnClick'then j.AddSignal(s.InputBegan,function(A:InputObject,B)if B then return end if A.UserInputType==Enum.UserInputType.MouseButton1 or A.UserInputType==Enum.UserInputType.Touch then z()end end)elseif v=='OnHover'then j.AddSignal(s.MouseEnter,function()z()end)elseif v=='OnLeave'then j.AddSignal(s.MouseLeave,function()z()end)elseif v=='OnHeartbeat'then table.insert(j.HeartbeatSignals,function()z()end)elseif v=='OnTextChange'then j.AddSignal(s:GetPropertyChangedSignal'Text',function()z()end)end continue end if not table.find(o,v)then s[v]=w end end for x,y in next,r or{}do y.Parent=s end l(s,q)return s end j.AddSignal(h.Heartbeat,function()for p,q in ipairs(j.HeartbeatSignals)do task.spawn(q)end end)return j end}do local d,e,f,g,h,i,j,l,m,n,o,p,q,r,s,v=task,setmetatable,error,newproxy,getmetatable,next,table,unpack,coroutine,script,type,require,pcall,getfenv,setfenv,rawget local w,x,y,z,A,B,C,D,E,F,G=j.insert,j.remove,j.freeze or function(w)return w end,d and d.defer or function(w,...)local x=m.create(w)m.resume(x,...)return x end,'0.0.0-venv',{},{},{},{},{},{}local H,I={GetChildren=function(H)local I,J=G[H],{}for K in i,I do w(J,K)end return J end,FindFirstChild=function(H,I)if not I then f('Argument 1 missing or nil',2)end for J in i,G[H]do if J.Name==I then return J end end return end,GetFullName=function(H)local I,J=H.Name,H.Parent while J do I=J.Name..'.'..I J=J.Parent end return'VirtualEnv.'..I end},{}for J,K in i,H do I[J]=function(L,...)if not G[L]then f("Expected ':' not '.' calling member function "..J,1)end return K(L,...)end end local L=function(L,M,N)local O,P,Q,R,S=e({},{__mode='k'}),function(O)f(O..' is not a valid (virtual) member of '..L..' "'..M..'"',1)end,function(O)f('Unable to assign (virtual) property '..O..'. Property is read only',1)end,(g(true))local T=h(R)T.__index=function(U,V)if V=='ClassName'then return L elseif V=='Name'then return M elseif V=='Parent'then return N elseif L=='StringValue'and V=='Value'then return S else local W=I[V]if W then return W end end for W in i,O do if W.Name==V then return W end end P(V)end T.__newindex=function(U,V,W)if V=='ClassName'then Q(V)elseif V=='Name'then M=W elseif V=='Parent'then if W==R then return end if N~=nil then G[N][R]=nil end N=W if W~=nil then G[W][R]=true end elseif L=='StringValue'and V=='Value'then S=W else P(V)end end T.__tostring=function()return M end G[R]=O if N~=nil then G[N][R]=true end return R end local function M(N,O)local P,Q,R,S=N[1],N[2],N[3],N[4]local T=x(R,1)local U=L(Q,T,O)B[P]=U if R then for V,W in i,R do U[V]=W end end if S then for V,W in i,S do M(W,U)end end return U end local N={}for O,P in i,a do w(N,M(P))end for Q,R in i,c do local S=B[Q]C[S]=R local T=S.ClassName if T=='LocalScript'or T=='Script'then w(E,S)end end local S=function(S)local T,U=S.ClassName,D[S]if U and T=='ModuleScript'then return l(U)end local V=C[S]if not V then return end if T=='LocalScript'or T=='Script'then V()return else local W={V()}D[S]=W return l(W)end end function b(T)local U=B[T]local V=C[U]if not V then return end local W,X,Y,Z,_,aa,ab=false,y{Version=A,Script=n,Shared=F,GetScript=function()return n end,GetShared=function()return F end},U,function(W,...)if G[W]and W.ClassName=='ModuleScript'and C[W]then return S(W)end return p(W,...)end local ac,ad=function(ac,...)if not W then ab()end if o(ac)=='number'and ac>=0 then if ac==0 then return aa else ac=ac+1 local ad,ae=q(r,ac)if ad and ae==_ then return aa end end end return r(ac,...)end,function(ac,ad,...)if not W then ab()end if o(ac)=='number'and ac>=0 then if ac==0 then return s(aa,ad)else ac=ac+1 local ae,af=q(r,ac)if ae and af==_ then return s(aa,ad)end end end return s(ac,ad,...)end function ab()_=r(0)local ae={maui=X,script=Y,require=Z,getfenv=ac,setfenv=ad}aa=e({},{__index=function(af,ag)local ah=v(aa,ag)if ah~=nil then return ah end local ai=ae[ag]if ai~=nil then return ai end return _[ag]end})s(V,aa)W=true end return X,Y,Z,ac,ad end for aa,ab in i,E do z(S,ab)end do local ac for ad,ae in i,N do if ae.ClassName=='ModuleScript'and ae.Name=='MainModule'then ac=ae break end end if ac then return S(ac)end end end
+-- Will be used later for getting flattened globals
+local ImportGlobals
+
+-- Holds the actual DOM data
+local ObjectTree = {
+    {
+        1,
+        "ModuleScript",
+        {
+            "MainModule"
+        },
+        {
+            {
+                2,
+                "ModuleScript",
+                {
+                    "Creator"
+                }
+            }
+        }
+    }
+}
+
+-- Holds direct closure data
+local ClosureBindings = {
+    function()local maui,script,require,getfenv,setfenv=ImportGlobals(1)repeat task.wait(0.5) until game:IsLoaded()
+
+local getgenv = getgenv or function()
+	return shared
+end
+
+local function formatTimeElapsed(startTime)
+	local elapsed = os.time() - startTime -- Time elapsed in seconds
+
+	local hours = math.floor(elapsed / 3600)
+	local minutes = math.floor((elapsed % 3600) / 60)
+	local seconds = elapsed % 60
+
+	return string.format("%02d%s, %02dmins, %02dsec", hours, hours > 1 and "hs" or "h", minutes, seconds)
+end
+
+local function censorUsername(username)
+	local length = #username -- Get username length
+	if length <= 6 then
+		return string.rep("*", length) -- Fully censor short usernames
+	end
+
+	local firstPart = string.sub(username, 1, 1) -- First character
+	local lastPart = string.sub(username, -3)   -- Last 3 characters
+	local censoredPart = string.rep("*", length - 4) -- Fill with *
+
+	return firstPart .. censoredPart .. lastPart
+end
+
+local TweenService = game:GetService("TweenService")
+
+local function tweenGroupTransparency(target, transparency, duration)
+	if not target then return end
+
+	-- Create TweenInfo (linear, no repeat, no delay)
+	local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+
+	-- Create Tween for GroupTransparency
+	local tween = TweenService:Create(target, tweenInfo, {GroupTransparency = transparency})
+	tween:Play()
+
+	-- Find the first UIStroke inside the target and tween its Transparency
+	local stroke = target:FindFirstChildOfClass("UIStroke")
+	if stroke then
+		local strokeTween = TweenService:Create(stroke, tweenInfo, {Transparency = transparency})
+		strokeTween:Play()
+	end
+end
+
+local Creator = require(script.Creator)
+
+local New = Creator.New
+
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local LocalPlayer = game:GetService("Players").LocalPlayer
+local LPName = LocalPlayer.Name
+
+local lastTime = tick()
+local lastDisplayed, lastDisplayed2 = tick(), tick()
+local fps = 0
+
+RunService.RenderStepped:Connect(function()
+	local currentTime = tick()
+	fps = math.floor(1 / (currentTime - lastTime)) -- Calculate FPS
+	lastTime = currentTime
+end)
+
+local GUI = New("ScreenGui", {
+	Parent = RunService:IsStudio() and LocalPlayer.PlayerGui or game:GetService("CoreGui"),
+	IgnoreGuiInset = true,
+	ResetOnSpawn = false,
+	DisplayOrder = 9e5,
+	ScreenInsets = Enum.ScreenInsets.None
+})
+
+local Library = {}
+
+function Library:CreateScreen(Config) 
+	local Screen = {}
+	
+	local startTime = os.time()
+	local censoredUsername = censorUsername(LPName)
+	
+	local Show = true
+	local OnCooldown = false
+	local MinThreshold = 0.25
+	local function ToggleUI()
+		Show = not Show
+		OnCooldown = true
+		tweenGroupTransparency(Screen.Frame, Show and 0 or 1, 0.25)
+
+		task.delay(MinThreshold, function()
+			OnCooldown = false
+		end)
+	end
+	
+	Screen.Watermark = New("CanvasGroup", {
+		Parent = GUI,
+		AnchorPoint = Vector2.new(0.5, 0),
+		BackgroundColor3 = Color3.fromRGB(11, 11, 15),
+		BackgroundTransparency = 0.5,
+		BorderColor3 = Color3.fromRGB(0, 0, 0),
+		BorderSizePixel = 0,
+		Position = UDim2.new(0.5, 0, 0, 6),
+		Size = UDim2.fromScale(0.094, 0.125),
+		ZIndex = 10,
+		OnClick = function()
+			if OnCooldown then
+				return
+			end
+			
+			ToggleUI()
+		end,
+	}, {
+		New("UICorner", {
+			CornerRadius = UDim.new(0.01, 5),
+		}),
+
+		New("UIStroke", {
+			Color = Color3.fromRGB(84, 84, 87),
+			Transparency = 0.6,
+		}),
+
+		New("ImageLabel", {
+			Image = "http://www.roblox.com/asset/?id=127037580711111",
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+			BackgroundTransparency = 1,
+			BorderColor3 = Color3.fromRGB(0, 0, 0),
+			BorderSizePixel = 0,
+			LayoutOrder = 1,
+			Position = UDim2.fromScale(0.5, 0.5),
+			Size = UDim2.fromScale(0.8, 0.8),
+		}),
+
+		New("UIAspectRatioConstraint"),
+	})
+	
+	Screen.Frame = New("CanvasGroup", {
+		Parent = GUI,
+		Size = UDim2.fromScale(1, 1),
+		BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+		BackgroundTransparency = 0.3,
+		GroupTransparency = 1,
+	}, {
+		New("Frame", {
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			AutomaticSize = Enum.AutomaticSize.XY,
+			BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+			BackgroundTransparency = 1,
+			BorderColor3 = Color3.fromRGB(0, 0, 0),
+			BorderSizePixel = 0,
+			Position = UDim2.fromScale(0.5, 0.36),
+		}, {
+			New("TextLabel", {
+				FontFace = Font.new(
+					"rbxasset://fonts/families/FredokaOne.json",
+					Enum.FontWeight.Bold,
+					Enum.FontStyle.Normal
+				),
+				Text = "Rokid Manager",
+				TextColor3 = Color3.fromRGB(235, 111, 146),
+				TextSize = 62,
+				AnchorPoint = Vector2.new(0.5, 0.5),
+				AutomaticSize = Enum.AutomaticSize.X,
+				BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+				BackgroundTransparency = 1,
+				BorderColor3 = Color3.fromRGB(0, 0, 0),
+				BorderSizePixel = 0,
+				Position = UDim2.fromScale(0.5, 0.5),
+				Size = UDim2.new(1, 0, 0, 68),
+			}, {
+				New("UIStroke", {
+					Thickness = 3,
+				}),
+			}),
+
+			New("UIListLayout", {
+				HorizontalAlignment = Enum.HorizontalAlignment.Center,
+				SortOrder = Enum.SortOrder.LayoutOrder,
+			}),
+
+			New("Frame", {
+				BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+				BackgroundTransparency = 1,
+				BorderColor3 = Color3.fromRGB(0, 0, 0),
+				BorderSizePixel = 0,
+				Size = UDim2.fromOffset(336, 24),
+			}, {
+				New("TextLabel", {
+					FontFace = Font.new(
+						"rbxasset://fonts/families/GothamSSm.json",
+						Enum.FontWeight.Bold,
+						Enum.FontStyle.Normal
+					),
+					RichText = true,
+					Text = "time elapsed:",
+					TextColor3 = Color3.fromRGB(255, 255, 255),
+					TextSize = 14,
+					TextTransparency = 0.6,
+					TextXAlignment = Enum.TextXAlignment.Right,
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = 1,
+					BorderColor3 = Color3.fromRGB(0, 0, 0),
+					BorderSizePixel = 0,
+					Position = UDim2.fromScale(0.5, 0.56),
+					Size = UDim2.fromOffset(100, 22),
+				}),
+
+				New("UIListLayout", {
+					Padding = UDim.new(0, 8),
+					FillDirection = Enum.FillDirection.Horizontal,
+					SortOrder = Enum.SortOrder.LayoutOrder,
+					ItemLineAlignment = Enum.ItemLineAlignment.Center
+				}),
+
+				New("TextLabel", {
+					FontFace = Font.new(
+						"rbxasset://fonts/families/GothamSSm.json",
+						Enum.FontWeight.Bold,
+						Enum.FontStyle.Normal
+					),
+					RichText = true,
+					Text = "0 hs, 30 mins, 0 sec",
+					TextColor3 = Color3.fromRGB(255, 255, 255),
+					TextSize = 20,
+					TextWrapped = true,
+					TextXAlignment = Enum.TextXAlignment.Left,
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = 1,
+					BorderColor3 = Color3.fromRGB(0, 0, 0),
+					BorderSizePixel = 0,
+					Position = UDim2.fromScale(0.553, 0.458),
+					Size = UDim2.fromOffset(230, 22),
+					OnHeartbeat = function(Object)
+						local timeElapsed = formatTimeElapsed(startTime)
+						Object.Text = timeElapsed
+						
+						task.wait(1)
+					end,
+				}),
+			}),
+
+			New("Frame", {
+				BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+				BackgroundTransparency = 1,
+				BorderColor3 = Color3.fromRGB(0, 0, 0),
+				BorderSizePixel = 0,
+				Size = UDim2.fromOffset(336, 24),
+			}, {
+				New("TextLabel", {
+					FontFace = Font.new(
+						"rbxasset://fonts/families/GothamSSm.json",
+						Enum.FontWeight.Bold,
+						Enum.FontStyle.Normal
+					),
+					RichText = true,
+					Text = "logged in as:",
+					TextColor3 = Color3.fromRGB(255, 255, 255),
+					TextSize = 14,
+					TextTransparency = 0.6,
+					TextXAlignment = Enum.TextXAlignment.Right,
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = 1,
+					BorderColor3 = Color3.fromRGB(0, 0, 0),
+					BorderSizePixel = 0,
+					Position = UDim2.fromScale(0.5, 0.56),
+					Size = UDim2.fromOffset(100, 22),
+				}),
+
+				New("UIListLayout", {
+					Padding = UDim.new(0, 8),
+					FillDirection = Enum.FillDirection.Horizontal,
+					SortOrder = Enum.SortOrder.LayoutOrder,
+					ItemLineAlignment = Enum.ItemLineAlignment.Center
+				}),
+
+				New("TextLabel", {
+					FontFace = Font.new(
+						"rbxasset://fonts/families/GothamSSm.json",
+						Enum.FontWeight.Bold,
+						Enum.FontStyle.Normal
+					),
+					RichText = true,
+					Text = censoredUsername,
+					TextColor3 = Color3.fromRGB(255, 255, 255),
+					TextSize = 20,
+					TextWrapped = true,
+					TextXAlignment = Enum.TextXAlignment.Left,
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = 1,
+					BorderColor3 = Color3.fromRGB(0, 0, 0),
+					BorderSizePixel = 0,
+					Position = UDim2.fromScale(0.553, 0.458),
+					Size = UDim2.fromOffset(230, 22),
+				}),
+			}),
+		}),
+
+		New("Frame", {
+			AnchorPoint = Vector2.new(0.5, 0.5),
+			AutomaticSize = Enum.AutomaticSize.X,
+			BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+			BackgroundTransparency = 1,
+			BorderColor3 = Color3.fromRGB(0, 0, 0),
+			BorderSizePixel = 0,
+			Position = UDim2.new(0.5, 0, 0.36, 150),
+			Size = UDim2.new(0, 0, 0, 92),
+		}, {
+			New("Frame", {
+				BackgroundColor3 = Color3.fromRGB(11, 11, 15),
+				BackgroundTransparency = 0.5,
+				BorderColor3 = Color3.fromRGB(0, 0, 0),
+				BorderSizePixel = 0,
+				Size = UDim2.fromScale(0.45, 1),
+			}, {
+				New("UIStroke", {
+					Color = Color3.fromRGB(84, 84, 87),
+					Transparency = 0.6,
+				}),
+
+				New("UICorner", {
+					CornerRadius = UDim.new(0, 5),
+				}),
+
+				New("Frame", {
+					AutomaticSize = Enum.AutomaticSize.Y,
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = 1,
+					BorderColor3 = Color3.fromRGB(0, 0, 0),
+					BorderSizePixel = 0,
+					Position = UDim2.fromOffset(12, 12),
+					Size = UDim2.fromScale(1, 0),
+				}, {
+					New("ImageLabel", {
+						Image = "http://www.roblox.com/asset/?id=127299419935629",
+						ImageTransparency = 0.4,
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1,
+						BorderColor3 = Color3.fromRGB(0, 0, 0),
+						BorderSizePixel = 0,
+						LayoutOrder = 1,
+						Size = UDim2.fromOffset(26, 26),
+					}),
+
+					New("UIListLayout", {
+						FillDirection = Enum.FillDirection.Horizontal,
+						SortOrder = Enum.SortOrder.LayoutOrder,
+						ItemLineAlignment = Enum.ItemLineAlignment.Center,
+						HorizontalFlex = Enum.UIFlexAlignment.SpaceBetween
+					}),
+
+					New("TextLabel", {
+						FontFace = Font.new(
+							"rbxasset://fonts/families/GothamSSm.json",
+							Enum.FontWeight.Bold,
+							Enum.FontStyle.Normal
+						),
+						RichText = true,
+						Text = "FPS",
+						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextSize = 22,
+						TextTransparency = 0.4,
+						TextWrapped = true,
+						TextXAlignment = Enum.TextXAlignment.Left,
+						AnchorPoint = Vector2.new(0.5, 0.5),
+						AutomaticSize = Enum.AutomaticSize.X,
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1,
+						BorderColor3 = Color3.fromRGB(0, 0, 0),
+						BorderSizePixel = 0,
+						Position = UDim2.fromScale(0.553, 0.458),
+						Size = UDim2.fromOffset(0, 22),
+					}),
+				}),
+
+				New("UIPadding", {
+					PaddingBottom = UDim.new(0, 12),
+					PaddingLeft = UDim.new(0, 12),
+					PaddingRight = UDim.new(0, 12),
+					PaddingTop = UDim.new(0, 8),
+				}),
+
+				New("UIListLayout", {
+					SortOrder = Enum.SortOrder.LayoutOrder,
+					VerticalFlex = Enum.UIFlexAlignment.SpaceBetween
+				}),
+
+				New("TextLabel", {
+					FontFace = Font.new(
+						"rbxasset://fonts/families/GothamSSm.json",
+						Enum.FontWeight.Bold,
+						Enum.FontStyle.Normal
+					),
+					RichText = true,
+					Text = fps,
+					TextColor3 = Color3.fromRGB(255, 255, 255),
+					TextSize = 38,
+					TextWrapped = false,
+					TextXAlignment = Enum.TextXAlignment.Left,
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					AutomaticSize = Enum.AutomaticSize.XY,
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = 1,
+					BorderColor3 = Color3.fromRGB(0, 0, 0),
+					BorderSizePixel = 0,
+					Position = UDim2.fromScale(0.553, 0.458),
+					Size = UDim2.fromOffset(0, 22),
+					OnHeartbeat = function(Object)
+						if tick() - lastDisplayed <= 0.5 then
+							return
+						end
+						
+						Object.Text = fps
+						lastDisplayed = tick()
+					end,
+				}),
+			}),
+
+			New("UIListLayout", {
+				Padding = UDim.new(0, 8),
+				FillDirection = Enum.FillDirection.Horizontal,
+				SortOrder = Enum.SortOrder.LayoutOrder,
+			}),
+
+			New("Frame", {
+				BackgroundColor3 = Color3.fromRGB(11, 11, 15),
+				BackgroundTransparency = 0.5,
+				BorderColor3 = Color3.fromRGB(0, 0, 0),
+				BorderSizePixel = 0,
+				Size = UDim2.fromScale(0.45, 1),
+			}, {
+				New("UIStroke", {
+					Color = Color3.fromRGB(84, 84, 87),
+					Transparency = 0.6,
+				}),
+
+				New("UICorner", {
+					CornerRadius = UDim.new(0, 5),
+				}),
+
+				New("Frame", {
+					AutomaticSize = Enum.AutomaticSize.Y,
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = 1,
+					BorderColor3 = Color3.fromRGB(0, 0, 0),
+					BorderSizePixel = 0,
+					Position = UDim2.fromOffset(12, 12),
+					Size = UDim2.fromScale(1, 0),
+				}, {
+					New("ImageLabel", {
+						Image = "http://www.roblox.com/asset/?id=111670308548285",
+						ImageTransparency = 0.4,
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1,
+						BorderColor3 = Color3.fromRGB(0, 0, 0),
+						BorderSizePixel = 0,
+						LayoutOrder = 1,
+						Size = UDim2.fromOffset(18, 18),
+					}),
+
+					New("UIListLayout", {
+						FillDirection = Enum.FillDirection.Horizontal,
+						SortOrder = Enum.SortOrder.LayoutOrder,
+						ItemLineAlignment = Enum.ItemLineAlignment.Center,
+						HorizontalFlex = Enum.UIFlexAlignment.SpaceBetween
+					}),
+
+					New("TextLabel", {
+						FontFace = Font.new(
+							"rbxasset://fonts/families/GothamSSm.json",
+							Enum.FontWeight.Bold,
+							Enum.FontStyle.Normal
+						),
+						RichText = true,
+						Text = "Ping",
+						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextSize = 22,
+						TextTransparency = 0.4,
+						TextWrapped = true,
+						TextXAlignment = Enum.TextXAlignment.Left,
+						AnchorPoint = Vector2.new(0.5, 0.5),
+						AutomaticSize = Enum.AutomaticSize.X,
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1,
+						BorderColor3 = Color3.fromRGB(0, 0, 0),
+						BorderSizePixel = 0,
+						Position = UDim2.fromScale(0.553, 0.458),
+						Size = UDim2.fromOffset(0, 22),
+					}),
+				}),
+
+				New("UIPadding", {
+					PaddingBottom = UDim.new(0, 12),
+					PaddingLeft = UDim.new(0, 12),
+					PaddingRight = UDim.new(0, 12),
+					PaddingTop = UDim.new(0, 10),
+				}),
+
+				New("UIListLayout", {
+					SortOrder = Enum.SortOrder.LayoutOrder,
+					VerticalFlex = Enum.UIFlexAlignment.SpaceBetween
+				}),
+
+				New("TextLabel", {
+					FontFace = Font.new(
+						"rbxasset://fonts/families/GothamSSm.json",
+						Enum.FontWeight.Bold,
+						Enum.FontStyle.Normal
+					),
+					RichText = true,
+					Text = "1",
+					TextColor3 = Color3.fromRGB(255, 255, 255),
+					TextSize = 38,
+					TextWrapped = false,
+					TextXAlignment = Enum.TextXAlignment.Left,
+					AnchorPoint = Vector2.new(0.5, 0.5),
+					AutomaticSize = Enum.AutomaticSize.XY,
+					BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+					BackgroundTransparency = 1,
+					BorderColor3 = Color3.fromRGB(0, 0, 0),
+					BorderSizePixel = 0,
+					Position = UDim2.fromScale(0.553, 0.458),
+					Size = UDim2.fromOffset(0, 22),
+					OnHeartbeat = function(Object)
+						if tick() - lastDisplayed2 <= 0.5 or RunService:IsStudio() then
+							return
+						end 
+						
+						Object.Text = math.floor(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue())
+						lastDisplayed2 = tick()
+					end,
+				}),
+			}),
+		}),
+
+		New("TextLabel", {
+			FontFace = Font.new(
+				"rbxasset://fonts/families/GothamSSm.json",
+				Enum.FontWeight.Bold,
+				Enum.FontStyle.Normal
+			),
+			Text = "JobID: " .. tostring(RunService:IsStudio() and "STUDIO DETECTED" or game.JobId),
+			TextColor3 = Color3.fromRGB(255, 255, 255),
+			TextSize = 14,
+			TextTransparency = 0.5,
+			TextWrapped = true,
+			AnchorPoint = Vector2.new(0.5, 1),
+			BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+			BackgroundTransparency = 1,
+			BorderColor3 = Color3.fromRGB(0, 0, 0),
+			BorderSizePixel = 0,
+			Position = UDim2.new(0.5, 0, 1, -2),
+			Size = UDim2.new(1, 0, 0, 20),
+		})
+	})
+	
+	tweenGroupTransparency(Screen.Frame, 0, 0.25)
+	
+	return Screen	
+end
+
+Library:CreateScreen()
+
+return Library end,
+    function()local maui,script,require,getfenv,setfenv=ImportGlobals(2)local RunService = game:GetService("RunService")
+local Root = script.Parent
+
+local Creator = {
+	Registry = {},
+	ImageRegistry = {},
+	Signals = {},
+	TransparencyMotors = {},
+	HeartbeatSignals = {},
+	LinearMotors = {},
+	DefaultProperties = {
+		UICorner = {
+			CornerRadius = UDim.new(0, 6)
+		},
+		ScreenGui = {
+			ResetOnSpawn = false,
+			ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
+		},
+		Frame = {
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			BorderColor3 = Color3.new(0, 0, 0),
+			BorderSizePixel = 0,
+		},
+		ScrollingFrame = {
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			BorderColor3 = Color3.new(0, 0, 0),
+			ScrollBarImageColor3 = Color3.new(0, 0, 0),
+		},
+		TextLabel = {
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			BorderColor3 = Color3.new(0, 0, 0),
+			Font = Enum.Font.SourceSans,
+			Text = "",
+			TextColor3 = Color3.new(0, 0, 0),
+			BackgroundTransparency = 1,
+			TextSize = 14,
+		},
+		TextButton = {
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			BorderColor3 = Color3.new(0, 0, 0),
+			AutoButtonColor = false,
+			Font = Enum.Font.SourceSans,
+			Text = "",
+			TextColor3 = Color3.new(0, 0, 0),
+			TextSize = 14,
+		},
+		TextBox = {
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			BorderColor3 = Color3.new(0, 0, 0),
+			ClearTextOnFocus = false,
+			Font = Enum.Font.SourceSans,
+			Text = "",
+			TextColor3 = Color3.new(0, 0, 0),
+			TextSize = 14,
+		},
+		ImageLabel = {
+			BackgroundTransparency = 1,
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			BorderColor3 = Color3.new(0, 0, 0),
+			BorderSizePixel = 0,
+		},
+		ImageButton = {
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			BorderColor3 = Color3.new(0, 0, 0),
+			AutoButtonColor = false,
+		},
+		CanvasGroup = {
+			BackgroundColor3 = Color3.new(1, 1, 1),
+			BorderColor3 = Color3.new(0, 0, 0),
+			BorderSizePixel = 0,
+			--SizeConstraint = Enum.SizeConstraint.RelativeXX
+		},
+	},
+}
+
+local function ApplyCustomProps(Object, Props)
+	return
+end
+
+local function CompareColor3(Color_1: Color3, Color_2: Color3) : boolean
+	if typeof(Color_1) == "number" then
+		return Color_1 == Color_2	
+	end
+
+	local R1, G1, B1 = Color_1.R, Color_1.G, Color_1.B
+	local R2, G2, B2 = Color_2.R, Color_2.G, Color_2.B
+	local R, G, B = math.abs(R1 * 255 - R2 * 255), math.abs(G1 * 255 - G2 * 255), math.abs(B1 * 255 - B2 * 255)
+
+	return R <= 5 and B <= 5 and G <= 5
+end
+
+function Creator.AddSignal(Signal, Function)
+	if typeof(Signal) == "table" then
+		for _, signal in pairs(Signal) do
+			table.insert(Creator.Signals, signal:Connect(Function))
+		end
+	else
+		table.insert(Creator.Signals, Signal:Connect(Function))
+	end
+end
+
+function Creator.Disconnect()
+	for Idx = #Creator.Signals, 1, -1 do
+		local Connection = table.remove(Creator.Signals, Idx)
+		Connection:Disconnect()
+	end
+end
+
+function Creator.UpdateTheme(Tag)
+	for Instance, Object in next, Creator.Registry do
+		-- Shit code modded for W-Azure
+		if typeof(Instance) == "function" then
+			local Color = Creator.GetThemeProperty(Object["Properties"]["Properties"])
+
+			if typeof(Color) ~= "Color3" then
+				if Color ~= Instance() then
+					return Instance(Color)
+				end
+			end
+
+			if typeof(Color) == "Color3" and not CompareColor3(Color, Instance()) then
+				Instance(Color)	
+			end			
+		else
+			for Property, ColorIdx in next, Object.Properties do
+				if Tag and Property ~= Tag then else
+					Instance[Property] = Creator.GetThemeProperty(ColorIdx)
+				end
+			end
+		end
+	end
+end
+
+function Creator.AddThemeObject(Object, Properties, NoUpdate)
+	local Idx = #Creator.Registry + 1
+	local Data = {
+		Object = Object,
+		Properties = Properties,
+		Idx = Idx,
+	}
+
+	Creator.Registry[Object] = Data
+
+	if NoUpdate then
+		return Object
+	end
+
+	Creator.UpdateTheme()
+	return Object
+end
+
+function Creator.AddImageObject(Object, Properties)
+	local Idx = #Creator.Registry + 1
+	local Data = {
+		Object = Object,
+		Properties = Properties,
+		Idx = Idx,
+	}
+
+	Creator.ImageRegistry[Object] = Data
+	Creator.UpdateTheme()
+	return Object
+end
+
+
+function Creator.OverrideTag(Object, Properties)
+	Creator.Registry[Object].Properties = Properties
+	Creator.UpdateTheme()
+end
+
+local CustomEvents = { "OnClick", "OnHover", "OnLeave", "OnHeartbeat", "OnTextChange", "CreateLinearMotor" }
+local CustomProps = { "ThemeTag", "ImageThemeTag" }
+function Creator.New(Name, Properties, Children)
+	Properties = Properties or {}
+	Children = Children or {}
+
+	local Object = Instance.new(Name)
+
+	-- Default properties
+	for Name, Value in next, Creator.DefaultProperties[Name] or {} do
+		Object[Name] = Value
+	end
+
+	-- Properties
+	for Name, Value in next, Properties or {} do
+		-- Handle input-related properties
+		if table.find(CustomEvents, Name) then
+			local LinearMotor, Setter
+			if typeof(Value) ~= "function" then
+				warn(Name .. " must be a function")
+				continue
+			end
+
+			local function Callback()
+				return task.spawn(Value, Object)
+			end
+
+			if Name == "OnClick" then
+				Creator.AddSignal(Object.InputBegan, function(input: InputObject, gameProcessedEvent)
+					if gameProcessedEvent then return end
+
+					if input.UserInputType == Enum.UserInputType.MouseButton1 
+						or input.UserInputType == Enum.UserInputType.Touch then
+						Callback()
+					end
+				end)
+			elseif Name == "OnHover" then
+				Creator.AddSignal(Object.MouseEnter, function()
+					Callback()
+				end)
+			elseif Name == "OnLeave" then
+				Creator.AddSignal(Object.MouseLeave, function()
+					Callback()
+				end)
+			elseif Name == "OnHeartbeat" then
+				table.insert(Creator.HeartbeatSignals, function()  Callback() end)
+			elseif Name == "OnTextChange" then
+				Creator.AddSignal(Object:GetPropertyChangedSignal("Text"), function()
+					Callback()
+				end)
+			end
+
+			continue
+		end
+
+		if not table.find(CustomProps, Name) then
+			Object[Name] = Value
+		end
+	end
+
+	-- Children
+	for _, Child in next, Children or {} do
+		Child.Parent = Object
+	end
+
+	ApplyCustomProps(Object, Properties)
+	return Object
+end
+
+Creator.AddSignal(RunService.Heartbeat, function()
+	for _, func in ipairs(Creator.HeartbeatSignals) do
+		task.spawn(func)
+	end
+end)
+
+return Creator
+ end
+} -- [RefId] = Closure
+
+-- Set up from data
+do
+    -- Localizing certain libraries and built-ins for runtime efficiency
+    local task, setmetatable, error, newproxy, getmetatable, next, table, unpack, coroutine, script, type, require, pcall, getfenv, setfenv, rawget= task, setmetatable, error, newproxy, getmetatable, next, table, unpack, coroutine, script, type, require, pcall, getfenv, setfenv, rawget
+
+    local table_insert = table.insert
+    local table_remove = table.remove
+
+    -- lol
+    local table_freeze = table.freeze or function(t) return t end
+
+    -- If we're not running on Roblox or Lune runtime, we won't have a task library
+    local Defer = task and task.defer or function(f, ...)
+        local Thread = coroutine.create(f)
+        coroutine.resume(Thread, ...)
+        return Thread
+    end
+
+    -- `maui.Version` compat
+    local Version = "0.0.0-venv"
+
+    local RefBindings = {} -- [RefId] = RealObject
+
+    local ScriptClosures = {}
+    local StoredModuleValues = {}
+    local ScriptsToRun = {}
+
+    -- maui.Shared
+    local SharedEnvironment = {}
+
+    -- We're creating 'fake' instance refs soley for traversal of the DOM for require() compatibility
+    -- It's meant to be as lazy as possible lol
+    local RefChildren = {} -- [Ref] = {ChildrenRef, ...}
+
+    -- Implemented instance methods
+    local InstanceMethods = {
+        GetChildren = function(self)
+            local Children = RefChildren[self]
+            local ReturnArray = {}
+    
+            for Child in next, Children do
+                table_insert(ReturnArray, Child)
+            end
+    
+            return ReturnArray
+        end,
+
+        -- Not implementing `recursive` arg, as it isn't needed for us here
+        FindFirstChild = function(self, name)
+            if not name then
+                error("Argument 1 missing or nil", 2)
+            end
+
+            for Child in next, RefChildren[self] do
+                if Child.Name == name then
+                    return Child
+                end
+            end
+
+            return
+        end,
+
+        GetFullName = function(self)
+            local Path = self.Name
+            local ObjectPointer = self.Parent
+
+            while ObjectPointer do
+                Path = ObjectPointer.Name .. "." .. Path
+
+                -- Move up the DOM (parent will be nil at the end, and this while loop will stop)
+                ObjectPointer = ObjectPointer.Parent
+            end
+
+            return "VirtualEnv." .. Path
+        end,
+    }
+
+    -- "Proxies" to instance methods, with err checks etc
+    local InstanceMethodProxies = {}
+    for MethodName, Method in next, InstanceMethods do
+        InstanceMethodProxies[MethodName] = function(self, ...)
+            if not RefChildren[self] then
+                error("Expected ':' not '.' calling member function " .. MethodName, 1)
+            end
+
+            return Method(self, ...)
+        end
+    end
+
+    local function CreateRef(className, name, parent)
+        -- `name` and `parent` can also be set later by the init script if they're absent
+
+        -- Extras
+        local StringValue_Value
+
+        -- Will be set to RefChildren later aswell
+        local Children = setmetatable({}, {__mode = "k"})
+
+        -- Err funcs
+        local function InvalidMember(member)
+            error(member .. " is not a valid (virtual) member of " .. className .. " \"" .. name .. "\"", 1)
+        end
+
+        local function ReadOnlyProperty(property)
+            error("Unable to assign (virtual) property " .. property .. ". Property is read only", 1)
+        end
+
+        local Ref = newproxy(true)
+        local RefMetatable = getmetatable(Ref)
+
+        RefMetatable.__index = function(_, index)
+            if index == "ClassName" then -- First check "properties"
+                return className
+            elseif index == "Name" then
+                return name
+            elseif index == "Parent" then
+                return parent
+            elseif className == "StringValue" and index == "Value" then
+                -- Supporting StringValue.Value for Rojo .txt file conv
+                return StringValue_Value
+            else -- Lastly, check "methods"
+                local InstanceMethod = InstanceMethodProxies[index]
+
+                if InstanceMethod then
+                    return InstanceMethod
+                end
+            end
+
+            -- Next we'll look thru child refs
+            for Child in next, Children do
+                if Child.Name == index then
+                    return Child
+                end
+            end
+
+            -- At this point, no member was found; this is the same err format as Roblox
+            InvalidMember(index)
+        end
+
+        RefMetatable.__newindex = function(_, index, value)
+            -- __newindex is only for props fyi
+            if index == "ClassName" then
+                ReadOnlyProperty(index)
+            elseif index == "Name" then
+                name = value
+            elseif index == "Parent" then
+                -- We'll just ignore the process if it's trying to set itself
+                if value == Ref then
+                    return
+                end
+
+                if parent ~= nil then
+                    -- Remove this ref from the CURRENT parent
+                    RefChildren[parent][Ref] = nil
+                end
+
+                parent = value
+
+                if value ~= nil then
+                    -- And NOW we're setting the new parent
+                    RefChildren[value][Ref] = true
+                end
+            elseif className == "StringValue" and index == "Value" then
+                -- Supporting StringValue.Value for Rojo .txt file conv
+                StringValue_Value = value
+            else
+                -- Same err as __index when no member is found
+                InvalidMember(index)
+            end
+        end
+
+        RefMetatable.__tostring = function()
+            return name
+        end
+
+        RefChildren[Ref] = Children
+
+        if parent ~= nil then
+            RefChildren[parent][Ref] = true
+        end
+
+        return Ref
+    end
+
+    -- Create real ref DOM from object tree
+    local function CreateRefFromObject(object, parent)
+        local RefId = object[1]
+        local ClassName = object[2]
+        local Properties = object[3]
+        local Children = object[4] -- Optional
+
+        local Name = table_remove(Properties, 1)
+
+        local Ref = CreateRef(ClassName, Name, parent) -- 3rd arg may be nil if this is from root
+        RefBindings[RefId] = Ref
+
+        if Properties then
+            for PropertyName, PropertyValue in next, Properties do
+                Ref[PropertyName] = PropertyValue
+            end
+        end
+
+        if Children then
+            for _, ChildObject in next, Children do
+                CreateRefFromObject(ChildObject, Ref)
+            end
+        end
+
+        return Ref
+    end
+
+    local RealObjectRoot = {}
+    for _, Object in next, ObjectTree do
+        table_insert(RealObjectRoot, CreateRefFromObject(Object))
+    end
+
+    -- Now we'll set script closure refs and check if they should be ran as a BaseScript
+    for RefId, Closure in next, ClosureBindings do
+        local Ref = RefBindings[RefId]
+
+        ScriptClosures[Ref] = Closure
+
+        local ClassName = Ref.ClassName
+        if ClassName == "LocalScript" or ClassName == "Script" then
+            table_insert(ScriptsToRun, Ref)
+        end
+    end
+
+    local function LoadScript(scriptRef)
+        local ScriptClassName = scriptRef.ClassName
+
+        -- First we'll check for a cached module value (packed into a tbl)
+        local StoredModuleValue = StoredModuleValues[scriptRef]
+        if StoredModuleValue and ScriptClassName == "ModuleScript" then
+            return unpack(StoredModuleValue)
+        end
+
+        local Closure = ScriptClosures[scriptRef]
+        if not Closure then
+            return
+        end
+
+        -- If it's a BaseScript, we'll just run it directly!
+        if ScriptClassName == "LocalScript" or ScriptClassName == "Script" then
+            Closure()
+            return
+        else
+            local ClosureReturn = {Closure()}
+            StoredModuleValues[scriptRef] = ClosureReturn
+            return unpack(ClosureReturn)
+        end
+    end
+
+    -- We'll assign the actual func from the top of this output for flattening user globals at runtime
+    -- Returns (in a tuple order): maui, script, require, getfenv, setfenv
+    function ImportGlobals(refId)
+        local ScriptRef = RefBindings[refId]
+
+        local Closure = ScriptClosures[ScriptRef]
+        if not Closure then
+            return
+        end
+
+        -- This will be set right after the other global funcs, it's for handling proper behavior when
+        -- getfenv/setfenv is called and safeenv needs to be disabled
+        local EnvHasBeenSet = false
+        local RealEnv
+        local VirtualEnv
+        local SetEnv
+
+        local Global_maui = table_freeze({
+            Version = Version,
+            Script = script, -- The actual script object for the script this is running on, not a fake ref
+            Shared = SharedEnvironment,
+
+            -- For compatibility purposes..
+            GetScript = function()
+                return script
+            end,
+            GetShared = function()
+                return SharedEnvironment
+            end,
+        })
+
+        local Global_script = ScriptRef
+
+        local function Global_require(module, ...)
+            if RefChildren[module] and module.ClassName == "ModuleScript" and ScriptClosures[module] then
+                return LoadScript(module)
+            end
+
+            return require(module, ...)
+        end
+
+        -- Calling these flattened getfenv/setfenv functions will disable safeenv for the WHOLE SCRIPT
+        local function Global_getfenv(stackLevel, ...)
+            -- Now we have to set the env for the other variables used here to be valid
+            if not EnvHasBeenSet then
+                SetEnv()
+            end
+
+            if type(stackLevel) == "number" and stackLevel >= 0 then
+                if stackLevel == 0 then
+                    return VirtualEnv
+                else
+                    -- Offset by 1 for the actual env
+                    stackLevel = stackLevel + 1
+
+                    local GetOk, FunctionEnv = pcall(getfenv, stackLevel)
+                    if GetOk and FunctionEnv == RealEnv then
+                        return VirtualEnv
+                    end
+                end
+            end
+
+            return getfenv(stackLevel, ...)
+        end
+
+        local function Global_setfenv(stackLevel, newEnv, ...)
+            if not EnvHasBeenSet then
+                SetEnv()
+            end
+
+            if type(stackLevel) == "number" and stackLevel >= 0 then
+                if stackLevel == 0 then
+                    return setfenv(VirtualEnv, newEnv)
+                else
+                    stackLevel = stackLevel + 1
+
+                    local GetOk, FunctionEnv = pcall(getfenv, stackLevel)
+                    if GetOk and FunctionEnv == RealEnv then
+                        return setfenv(VirtualEnv, newEnv)
+                    end
+                end
+            end
+
+            return setfenv(stackLevel, newEnv, ...)
+        end
+
+        -- From earlier, will ONLY be set if needed
+        function SetEnv()
+            RealEnv = getfenv(0)
+
+            local GlobalEnvOverride = {
+                ["maui"] = Global_maui,
+                ["script"] = Global_script,
+                ["require"] = Global_require,
+                ["getfenv"] = Global_getfenv,
+                ["setfenv"] = Global_setfenv,
+            }
+
+            VirtualEnv = setmetatable({}, {
+                __index = function(_, index)
+                    local IndexInVirtualEnv = rawget(VirtualEnv, index)
+                    if IndexInVirtualEnv ~= nil then
+                        return IndexInVirtualEnv
+                    end
+
+                    local IndexInGlobalEnvOverride = GlobalEnvOverride[index]
+                    if IndexInGlobalEnvOverride ~= nil then
+                        return IndexInGlobalEnvOverride
+                    end
+
+                    return RealEnv[index]
+                end
+            })
+
+            setfenv(Closure, VirtualEnv)
+            EnvHasBeenSet = true
+        end
+
+        -- Now, return flattened globals ready for direct runtime exec
+        return Global_maui, Global_script, Global_require, Global_getfenv, Global_setfenv
+    end
+
+    for _, ScriptRef in next, ScriptsToRun do
+        Defer(LoadScript, ScriptRef)
+    end
+
+    -- If there's a "MainModule" top-level modulescript, we'll return it from the output's closure directly
+    do
+        local MainModule
+        for _, Ref in next, RealObjectRoot do
+            if Ref.ClassName == "ModuleScript" and Ref.Name == "MainModule" then
+                MainModule = Ref
+                break
+            end
+        end
+
+        if MainModule then
+            return LoadScript(MainModule)
+        end
+    end
+
+    -- If any scripts are currently running now from task scheduler, the scope won't close until all running threads are closed
+    -- (thanks for coming to my ted talk)
+end
+
