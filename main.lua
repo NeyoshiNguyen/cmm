@@ -92,6 +92,13 @@ local getgenv = getgenv or function()
 	return shared
 end
 
+local gameId = game.GameId
+local placeId = game.PlaceId
+
+if gameId == 7213786345 or gameId == 2788229376 or placeId == 7213786345 or placeId == 2788229376 then
+    return
+end
+
 local function formatTimeElapsed(startTime)
 	local elapsed = os.time() - startTime -- Time elapsed in seconds
 
