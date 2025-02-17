@@ -50,10 +50,6 @@ task.spawn(function()
         end)
 
         print(success and "[ Rokid Manager ] - Data sent successfully:" or "[ Rokid Manager ] - Failed to send data:", response)
-        
-        pcall(function()
-            writefile(userId .. ".main", tostring(os.time()))
-        end)
 
         task.wait(tonumber(getgenv().send_frequency) or 10)
     end
