@@ -86,6 +86,10 @@ if gameId == 7213786345 or gameId == 2788229376 or placeId == 7213786345 or plac
     return
 end
 
+if getgenv().disable_ui then
+	return
+end
+
 local function formatTimeElapsed(startTime)
 	local elapsed = os.time() - startTime -- Time elapsed in seconds
 
