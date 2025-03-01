@@ -7,10 +7,9 @@
     .gg/w-azure
 --]]
 
--- // Completely isolate this one with the rest of the script :chonlay:
 task.spawn(function()
     getgenv().is_stop = false
-    getgenv().send_frequency = getgenv().send_frequency or 10
+    getgenv().send_frequency = getgenv().send_frequency or 1
 
     local Players = game:GetService("Players")
     local LocalPlayer = Players.LocalPlayer
@@ -38,29 +37,22 @@ task.spawn(function()
         end
 
         local userId = tostring(LocalPlayer.UserId)
-        print("[ Rokid Manager ] - Sending data to API for user ID:", userId)
+        print("[ Rokid Manager ] - Processing for user ID:", userId)
 
-        local success, response = pcall(function()
-            return request({
-                Url = "http://localhost:5000/api/loaded",
-                Method = "POST",
-                Headers = { ["content-type"] = "application/json" },
-                Body = HttpService:JSONEncode({ id = userId })
-            })
+        pcall(function()
+            writefile(userId .. ".main", "mmb")
         end)
+		print("[ Rokid Manager ] - File written for user ID:", userId)
+		print("[ Rokid Manager ] - Waiting for next transmission...")
 
-        print(success and "[ Rokid Manager ] - Data sent successfully:" or "[ Rokid Manager ] - Failed to send data:", response)
-
-        task.wait(tonumber(getgenv().send_frequency) or 10)
+        task.wait(tonumber(getgenv().send_frequency) or 1)
     end
 end)
 
 local setidentity = syn and syn.set_thread_identity or set_thread_identity or setidentity or setthreadidentity or function(...) return ... end
 setidentity(8)
--- Will be used later for getting flattened globals
 local ImportGlobals
 
--- Holds the actual DOM data
 local ObjectTree = {
     {
         1,
@@ -80,7 +72,6 @@ local ObjectTree = {
     }
 }
 
--- Holds direct closure data
 local ClosureBindings = {
     function()local maui,script,require,getfenv,setfenv=ImportGlobals(1)repeat task.wait(0.5) until game:IsLoaded()
 
