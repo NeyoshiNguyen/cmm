@@ -15,14 +15,6 @@ task.spawn(function()
     local LocalPlayer = Players.LocalPlayer
     local CoreGui = game:GetService("CoreGui")
     local HttpService = game:GetService("HttpService")
-    local RunService = game:GetService("RunService")
-    local MaxFPS = 10
-	
-    while true do
-	local t0 = tick()
-	RunService.Heartbeat:Wait()
-	repeat until (t0 + 1/MaxFPS) < tick()
-    end
 
     local function isGameActive()
         return pcall(function()
