@@ -16,13 +16,6 @@ task.spawn(function()
     local CoreGui = game:GetService("CoreGui")
     local HttpService = game:GetService("HttpService")
 
-    local specificGameIds = {
-        [17017769292] = true,
-        [16146832113] = true,
-        [8304191830] = true,
-        [12886143095] = true
-    }
-
     local function isGameActive()
         return pcall(function()
             return LocalPlayer and CoreGui:FindFirstChild("RobloxPromptGui")
@@ -32,13 +25,13 @@ task.spawn(function()
     CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(v)
         if v.Name == "ErrorPrompt" and v:FindFirstChild("MessageArea") and v.MessageArea:FindFirstChild("ErrorFrame") then
             getgenv().is_stop = true
-            print("[ Rokid Manager ] - Error Prompt Detected!")
-        end)
+            print("[ Rokid Manager ] - Error Prompt Detected")
+        end
     end)
 
     while not getgenv().is_stop do
         if not Players.LocalPlayer or not Players.LocalPlayer:FindFirstChild("PlayerScripts") or not isGameActive() then
-            print("[ Rokid Manager ] - Game is no longer active, stopping data transmission!")
+            print("[ Rokid Manager ] - Game is no longer active, stopping data transmission.")
             game:Shutdown()
             break
         end
@@ -46,29 +39,11 @@ task.spawn(function()
         local userId = tostring(LocalPlayer.UserId)
         print("[ Rokid Manager ] - Processing for user ID:", userId)
 
-        local placeId = game.PlaceId
-        print("[ Rokid Manager ] - Current PlaceId:", placeId)
-
-        if specificGameIds[placeId] then
-            pcall(function()
-                if not isfolder("Rokid Manager") then
-                    makefolder("Rokid Manager")
-                end
-
-                print("[ Rokid Manager - Check Executor V3 ] - Attempting to write file: " .. userId .. ".main")
-                writefile("Rokid Manager/" .. userId .. ".main", "mmb")
-                print("[ Rokid Manager - Check Executor V3 ] - Successfully wrote file: " .. userId .. ".main")
-            end)
-        else
-            pcall(function()
-                print("[ Rokid Manager - Check Executor V2.2 ] - Attempting to write file: " .. userId .. ".main")
-                writefile(userId .. ".main", "mmb")
-                print("[ Rokid Manager - Check Executor V2.2 ] - Successfully wrote file: " .. userId .. ".main")
-            end)
-        end
-
-        print("[ Rokid Manager ] - File written for user ID:", userId)
-        print("[ Rokid Manager ] - Waiting for next transmission...")
+        pcall(function()
+            writefile(userId .. ".main", "mmb")
+        end)
+		print("[ Rokid Manager ] - File written for user ID:", userId)
+		print("[ Rokid Manager ] - Waiting for next transmission...")
 
         task.wait(tonumber(getgenv().send_frequency) or 1)
     end
