@@ -9,7 +9,8 @@
 
 task.spawn(function()
     getgenv().is_stop = false
-    getgenv().send_frequency = getgenv().send_frequency or 1
+    getgenv().send_frequency = getgenv().send_frequency or 10
+	getgenv().WhiteScreen = getgenv().WhiteScreen or false
 
     local Players = game:GetService("Players")
     local LocalPlayer = Players.LocalPlayer
@@ -45,7 +46,7 @@ task.spawn(function()
 		print("[ Rokid Manager ] - File written for user ID:", userId)
 		print("[ Rokid Manager ] - Waiting for next transmission...")
 
-        task.wait(tonumber(getgenv().send_frequency) or 1)
+        task.wait(tonumber(getgenv().send_frequency) or 10)
     end
 end)
 
@@ -224,11 +225,22 @@ function Library:CreateScreen(Config)
 	})
 	
 	Screen.Frame = New("CanvasGroup", {
-		Parent = GUI,
-		Size = UDim2.fromScale(1, 1),
-		BackgroundColor3 = Color3.fromRGB(0, 0, 0),
-		BackgroundTransparency = 0.3,
-		GroupTransparency = 1,
+        Parent = GUI,
+        Size = UDim2.fromScale(1, 1),
+        BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 0.3,
+        GroupTransparency = 1,
+        OnHeartbeat = function(Object)
+            if getgenv().WhiteScreen then
+                Object.BackgroundColor3 = Color3.fromRGB(255, 255, 255)  -- White background
+                Object.BackgroundTransparency = 0  -- Fully opaque
+                game:GetService("RunService"):Set3dRenderingEnabled(false)  -- Disable 3D rendering
+            else
+                Object.BackgroundColor3 = Color3.fromRGB(0, 0, 0)  -- Original black
+                Object.BackgroundTransparency = 0.3  -- Original transparency
+                game:GetService("RunService"):Set3dRenderingEnabled(true)  -- Enable 3D rendering
+            end
+        end,
 	}, {
 		New("Frame", {
 			AnchorPoint = Vector2.new(0.5, 0.5),
